@@ -11,7 +11,7 @@ const App = () => {
   const colors = {
     primary: '#222831',
     secondary: '#393E46',
-    light: '#EEEEEE'
+    light: '#EEEEEE',
     accent: '#00ADB5',
     lightBlue: '#E3FDFD',
     paleBlue: '#CBF1F5',
