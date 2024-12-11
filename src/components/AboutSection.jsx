@@ -42,7 +42,7 @@ const AboutSection = () => {
                 </h1>
                 <div className="prose max-w-none" style={{ color: colors.secondary }}>
                   <p className="text-lg leading-relaxed">
-                    As a seasoned professional with over 9 years of experience in legal compliance and quality control across APAC and US markets, I have demonstrated strong analytical capabilities through process optimization that achieved 30% cost reduction and 15% efficiency improvements. My journey shows exceptional adaptability in transitioning across different roles and regions, with proven skills in data analysis, strategic oversight, and transformation management.
+                    As a professional with over 9 years of experience in legal compliance and quality control across APAC and US markets, I have demonstrated strong analytical capabilities through process optimization that achieved 30% cost reduction and 15% efficiency improvements. My journey shows exceptional adaptability in transitioning across different roles and regions, with proven skills in data analysis, strategic oversight, and transformation management.
                   </p>
                   <p className="text-lg leading-relaxed mt-4">
                     While I am new to formal data analytics, my background in compliance monitoring, process optimization, and technical quality control provides a solid foundation for data analysis, combined with my demonstrated ability to quickly master new technical skills and commitment to continuous learning through hands-on experience and professional development.
