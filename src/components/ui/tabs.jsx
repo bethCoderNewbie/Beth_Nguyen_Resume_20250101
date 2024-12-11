@@ -1,7 +1,5 @@
-import React from 'react';
-
-export const Tabs = ({ children, defaultValue }) => (
-  <div className="w-full">{children}</div>
+export const Tabs = ({ children, defaultValue, className }) => (
+  <div className={`w-full ${className}`}>{children}</div>
 );
 
 export const TabsList = ({ children, className }) => (
@@ -13,5 +11,5 @@ export const TabsTrigger = ({ children, value, className }) => (
 );
 
 export const TabsContent = ({ children, value }) => (
-  <div>{children}</div>
+  <div>{value}>{children}</div>
 );
