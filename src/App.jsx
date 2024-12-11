@@ -3,6 +3,7 @@ import {
   StrengthWeaknessAnalysis, 
   CareerTimeline, 
   QuadrantSkillsChart,
+  AboutSection,
   CoreCompetenceWheel 
 } from './components';
 import { Mail, Linkedin, GraduationCap } from 'lucide-react';
@@ -40,7 +41,7 @@ const App = () => {
                 </Tabs>
               </div>
             </CardContent>
-          </Card>
+          <AboutSection />
         </div>
       </section>
 
