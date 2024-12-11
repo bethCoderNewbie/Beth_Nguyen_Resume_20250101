@@ -1,119 +1,115 @@
-import React from 'react';
-import { Mail, Linkedin, GraduationCap, User } from 'lucide-react';
-import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
-import { Card, CardContent } from '@/components/ui/card';
+import React, { useState } from 'react';
+import { Mail, Linkedin, User, GraduationCap } from 'lucide-react';
 
 const AboutSection = () => {
-  const colors = {
-    primary: '#222831',
-    secondary: '#393E46',
-    accent: '#00ADB5',
-    light: '#EEEEEE',
-    lightBlue: '#E3FDFD',
-    paleBlue: '#CBF1F5',
-    skyBlue: '#A6E3E9',
-    oceanBlue: '#71C9CE'
-  };
+  const [activeTab, setActiveTab] = useState('about');
+
+  const navItems = [
+    { id: 'about', icon: User, label: 'About Me' },
+    { id: 'contact', icon: Mail, label: 'Contact' },
+    { id: 'education', icon: GraduationCap, label: 'Education' }
+  ];
 
   return (
-    <section className="py-8 px-4" style={{ backgroundColor: colors.light }}>
-      <div className="max-w-4xl mx-auto">
-        <Tabs defaultValue="about" className="w-full">
-          <TabsList className="w-full mb-8" style={{ backgroundColor: colors.paleBlue }}>
-            <TabsTrigger value="about" className="flex items-center gap-2 data-[state=active]:bg-white">
-              <User size={18} style={{ color: colors.accent }} />
-              About Me
-            </TabsTrigger>
-            <TabsTrigger value="contact" className="flex items-center gap-2 data-[state=active]:bg-white">
-              <Mail size={18} style={{ color: colors.accent }} />
-              Contact
-            </TabsTrigger>
-            <TabsTrigger value="education" className="flex items-center gap-2 data-[state=active]:bg-white">
-              <GraduationCap size={18} style={{ color: colors.accent }} />
-              Education
-            </TabsTrigger>
-          </TabsList>
+    <div className="p-8 max-w-4xl mx-auto">
+      {/* Navigation */}
+      <nav className="flex gap-6 mb-4">
+        {navItems.map(({ id, icon: Icon, label }) => (
+          <button
+            key={id}
+            onClick={() => setActiveTab(id)}
+            className={`flex items-center gap-2 ${
+              activeTab === id ? 'text-cyan-500' : 'text-gray-600'
+            } hover:text-cyan-600 transition-colors`}
+          >
+            <Icon size={18} />
+            {label}
+          </button>
+        ))}
+      </nav>
 
-          <TabsContent value="about">
-            <Card className="shadow-lg" style={{ backgroundColor: colors.lightBlue }}>
-              <CardContent className="p-6">
-                <h1 className="text-3xl font-bold mb-4" style={{ color: colors.primary }}>
-                  Beth Nguyen
-                </h1>
-                <div className="prose max-w-none" style={{ color: colors.secondary }}>
-                  <p className="text-lg leading-relaxed">
-                    As a professional with over 9 years of experience in legal compliance and quality control across APAC and US markets, I have demonstrated strong analytical capabilities through process optimization that achieved 30% cost reduction and 15% efficiency improvements. My journey shows exceptional adaptability in transitioning across different roles and regions, with proven skills in data analysis, strategic oversight, and transformation management.
-                  </p>
-                  <p className="text-lg leading-relaxed mt-4">
-                    While I am new to formal data analytics, my background in compliance monitoring, process optimization, and technical quality control provides a solid foundation for data analysis, combined with my demonstrated ability to quickly master new technical skills and commitment to continuous learning through hands-on experience and professional development.
-                  </p>
-                </div>
-              </CardContent>
-            </Card>
-          </TabsContent>
+      {/* About Section */}
+      {activeTab === 'about' && (
+        <div>
+          <div className="text-gray-600 mb-2">about{'>'}</div>
+          <div className="bg-[#E3FDFD] rounded-lg p-6">
+            <h1 className="text-2xl font-bold mb-4 text-[#222831]">Beth Nguyen</h1>
+            <div className="space-y-4 text-[#393E46]">
+              <p className="text-lg leading-relaxed">
+                As a professional with over 9 years of experience in legal compliance and quality control across APAC and US markets, I have demonstrated strong analytical capabilities through process optimization that achieved 30% cost reduction and 15% efficiency improvements. My journey shows exceptional adaptability in transitioning across different roles and regions, with proven skills in data analysis, strategic oversight, and transformation management.
+              </p>
+              <p className="text-lg leading-relaxed">
+                While I am new to formal data analytics, my background in compliance monitoring, process optimization, and technical quality control provides a solid foundation for data analysis, combined with my demonstrated ability to quickly master new technical skills and commitment to continuous learning through hands-on experience and professional development.
+              </p>
+            </div>
+          </div>
+        </div>
+      )}
 
-          <TabsContent value="contact">
-            <Card className="shadow-lg" style={{ backgroundColor: colors.lightBlue }}>
-              <CardContent className="p-6">
-                <div className="space-y-4">
-                  <a 
-                    href="mailto:beth88.career@gmail.com"
-                    className="flex items-center gap-2 text-lg hover:text-cyan-600 transition-colors"
-                    style={{ color: colors.accent }}
-                  >
-                    <Mail size={20} />
-                    beth88.career@gmail.com
-                  </a>
-                  <a 
-                    href="http://www.linkedin.com/in/beth-nguyena773a157"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="flex items-center gap-2 text-lg hover:text-cyan-600 transition-colors"
-                    style={{ color: colors.accent }}
-                  >
-                    <Linkedin size={20} />
-                    LinkedIn Profile
-                  </a>
-                </div>
-              </CardContent>
-            </Card>
-          </TabsContent>
+      {/* Contact Section */}
+      {activeTab === 'contact' && (
+        <div>
+          <div className="text-gray-600 mb-2">contact{'>'}</div>
+          <div className="bg-[#E3FDFD] rounded-lg p-6">
+            <div className="space-y-4">
+              <a 
+                href="mailto:beth88.career@gmail.com"
+                className="flex items-center gap-2 text-cyan-500 hover:text-cyan-600 transition-colors"
+              >
+                <Mail size={20} />
+                beth88.career@gmail.com
+              </a>
+              <a 
+                href="http://www.linkedin.com/in/beth-nguyena773a157"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center gap-2 text-cyan-500 hover:text-cyan-600 transition-colors"
+              >
+                <Linkedin size={20} />
+                LinkedIn Profile
+              </a>
+            </div>
+          </div>
+        </div>
+      )}
 
-          <TabsContent value="education">
-            <Card className="shadow-lg" style={{ backgroundColor: colors.lightBlue }}>
-              <CardContent className="p-6 space-y-6">
-                <div>
-                  <h3 className="text-xl font-bold mb-2" style={{ color: colors.primary }}>
-                    Wichita State University
-                  </h3>
-                  <p className="text-lg" style={{ color: colors.secondary }}>
-                    Master's degree, Business Analytics
-                  </p>
-                  <p className="text-sm" style={{ color: colors.secondary }}>
-                    Aug 2024 - Aug 2026
-                  </p>
-                </div>
+      {/* Education Section */}
+      {activeTab === 'education' && (
+        <div>
+          <div className="text-gray-600 mb-2">education{'>'}</div>
+          <div className="bg-[#E3FDFD] rounded-lg p-6">
+            <div className="space-y-6">
+              <div>
+                <h3 className="text-xl font-bold mb-2 text-[#222831]">
+                  Wichita State University
+                </h3>
+                <p className="text-lg text-[#393E46]">
+                  Master's degree, Business Analytics
+                </p>
+                <p className="text-sm text-[#393E46]">
+                  Aug 2024 - Aug 2026
+                </p>
+              </div>
 
-                <div>
-                  <h3 className="text-xl font-bold mb-2" style={{ color: colors.primary }}>
-                    University of Economics and Law Ho Chi Minh City
-                  </h3>
-                  <p className="text-lg" style={{ color: colors.secondary }}>
-                    Bachelor's degree, Banking, Corporate, Finance, and Securities Law
-                  </p>
-                  <p className="text-sm" style={{ color: colors.secondary }}>
-                    2008 - 2012
-                  </p>
-                  <p className="mt-2" style={{ color: colors.secondary }}>
-                    Grade: 3 out of 4
-                  </p>
-                </div>
-              </CardContent>
-            </Card>
-          </TabsContent>
-        </Tabs>
-      </div>
-    </section>
+              <div>
+                <h3 className="text-xl font-bold mb-2 text-[#222831]">
+                  University of Economics and Law Ho Chi Minh City
+                </h3>
+                <p className="text-lg text-[#393E46]">
+                  Bachelor's degree, Banking, Corporate, Finance, and Securities Law
+                </p>
+                <p className="text-sm text-[#393E46]">
+                  2008 - 2012
+                </p>
+                <p className="mt-2 text-[#393E46]">
+                  Grade: 3 out of 4
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      )}
+    </div>
   );
 };
 
