@@ -13,6 +13,11 @@ const QuadrantSkillsChart = () => {
       details: {
         description: 'Expertise in analytical problem-solving across multiple domains',
         keySkills: ['Problem Solving', 'Critical Thinking', 'Strategic Planning']
+        achievements: [
+          'Evaluated legal risks in business expansion',
+          'Developed solutions for complex acquisition projects',
+          'Optimized legal operations to achieve 30% cost reduction'
+        ]
       }
     },
     {
@@ -24,8 +29,9 @@ const QuadrantSkillsChart = () => {
         description: 'Proven track record in managing large-scale projects',
         keySkills: ['Team Leadership', 'Risk Management', 'Resource Planning', 'Stakeholder Management'],
         achievements: [
-          'Successfully delivered $5M project under budget',
-          'Led teams across Vietnam, Singapore, India, Cambodia'
+          'Led cheese production facility acquisition',
+          'Led teams across Vietnam, Singapore, India, Cambodia',
+          'Managed ride-hailing platform restructuring'
         ]
       }
     },
