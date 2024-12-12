@@ -50,6 +50,29 @@ const QuadrantSkillsChart = () => {
       }
     },
     {
+      name: 'Technical Skills for Data Analytics',
+      proficiency: 20,
+      experience: 1,
+      color: '#A6E3E9',
+      details: {
+        description: 'Developing necessity skills for Data Analytics',
+        keySkills: [
+          'Python',
+          'Excel',
+          'JavaScript',
+          'HTML',
+          'CSS',
+          'Version Control using GiHub'
+        ],
+        achievements: [
+          'Built an interactive resume using React, Vite, and Vercel for deployment',
+          'Implemented responsive design with Tailwind CSS for optimal viewing across devices',
+          'Created dynamic data visualizations for skills presentation using React components',
+          'Utilized Git/GitHub for version control and collaborative development'
+        ]
+      }
+    },
+    {
       name: 'Technical',
       proficiency: 75,
       experience: 2,
