@@ -12,7 +12,7 @@ const QuadrantSkillsChart = () => {
       color: '#A6E3E9',
       details: {
         description: 'Expertise in analytical problem-solving across multiple domains',
-        keySkills: ['Problem Solving', 'Critical Thinking', 'Strategic Planning']
+        keySkills: ['Problem Solving', 'Critical Thinking', 'Strategic Planning'],  // Added comma here
         achievements: [
           'Evaluated legal risks in business expansion',
           'Developed solutions for complex acquisition projects',
