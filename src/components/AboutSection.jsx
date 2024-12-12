@@ -85,7 +85,7 @@ const AboutSection = () => {
 
             <div>
               <h3 className="text-xl font-bold mb-2 text-[#222831]">
-                University of Economics and Law Ho Chi Minh City
+                University of Economics and Law Ho Chi Minh City Vietnam
               </h3>
               <p className="text-lg text-[#393E46]">
                 Bachelor's degree, Banking, Corporate, Finance, and Securities Law
