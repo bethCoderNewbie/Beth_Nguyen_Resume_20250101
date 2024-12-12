@@ -53,7 +53,7 @@ const QuadrantSkillsChart = () => {
       name: 'Technical Skills for Data Analytics',
       proficiency: 20,
       experience: 1,
-      color: '#A6E3E9',
+      color: '#3F72AF',
       details: {
         description: 'Developing necessity skills for Data Analytics',
         keySkills: [
