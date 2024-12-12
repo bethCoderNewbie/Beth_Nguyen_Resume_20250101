@@ -73,7 +73,7 @@ const QuadrantSkillsChart = () => {
       }
     },
     {
-      name: 'Technical',
+      name: 'Process Automation',
       proficiency: 75,
       experience: 2,
       color: '#00ADB5',
