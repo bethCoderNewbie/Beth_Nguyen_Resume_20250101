@@ -76,7 +76,7 @@ const CoreCompetenceWheel = () => {
   };
 
   return (
-    <div className="w-full max-w-3xl mx-auto p-6 flex flex-col items-center" style={{ backgroundColor: colors.lightBlue }}>
+    <div className="w-full max-w-3xl mx-auto p-6 flex flex-col items-center" style={{ backgroundColor: colors.light }}>
       <h2 className="text-2xl font-bold mb-6" style={{ color: colors.primary }}>
         Core Competencies
       </h2>
