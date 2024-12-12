@@ -180,7 +180,7 @@ const CareerTimeline = () => {
   return (
     <div className="max-w-3xl mx-auto p-6" style={{ backgroundColor: '#EEEEEE' }}>
       <h2 className="text-2xl font-bold mb-8 text-center" style={{ color: '#222831' }}>
-        Professional Timeline
+        Professional Journey
       </h2>
       <div className="relative">
         {timelineData.map((item, index) => (
