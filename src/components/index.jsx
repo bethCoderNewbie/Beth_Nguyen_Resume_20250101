@@ -1,4 +1,3 @@
-#export { default as StrengthWeaknessAnalysis } from './StrengthWeaknessAnalysis.jsx';
 export { default as CareerTimeline } from './CareerTimeline.jsx';
 export { default as QuadrantSkillsChart } from './QuadrantSkillsChart.jsx';
 export { default as CoreCompetenceWheel } from './CoreCompetenceWheel.jsx';
