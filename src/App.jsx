@@ -3,8 +3,7 @@ import {
   AboutSection,
   CareerTimeline, 
   QuadrantSkillsChart,
-  CoreCompetenceWheel,
-  StrengthWeaknessAnalysis 
+  CoreCompetenceWheel 
 } from './components';
 
 const App = () => {
