@@ -36,14 +36,7 @@ const App = () => {
           <CoreCompetenceWheel />
         </div>
       </section>
-
-      {/* Strengths and Weaknesses */}
-      <section className="py-12 px-4">
-        <div className="max-w-4xl mx-auto">
-          <StrengthWeaknessAnalysis />
-        </div>
-      </section>
-
+  
       <footer className="py-6 px-4 text-center" style={{ backgroundColor: colors.oceanBlue }}>
         <p className="text-sm" style={{ color: colors.light }}>
           © 2024 Beth Nguyen. Professional Portfolio
